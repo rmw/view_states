@@ -1,3 +1,22 @@
 = ViewStates
 
 This project rocks and uses MIT-LICENSE.
+
+controller
+  view_states_for :current_user, :is_mobile_device?
+
+
+model
+User
+  has_view_states :subscribed?, has_paid?
+
+view
+  state_for(:all)  => user_not_subscribed, user_has_paid, is_mobile_device
+  state_for(:button_text)
+  state_for(:button_attributes)
+
+YML:
+  book_text:
+    user_subscribed: "Book"
+    default: "Sign In"
+(?) shared: "<span icon-star />"

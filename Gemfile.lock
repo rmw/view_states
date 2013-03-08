@@ -105,6 +105,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  i18n
   jquery-rails
   rspec-rails
   sqlite3
